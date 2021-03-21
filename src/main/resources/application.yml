@@ -3,9 +3,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/bookshop?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/bookshop?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: ncc-1701
+    password: root
     minIdle: 1
     maxActive: 5
     timeBetweenEvictionRunsMillis: 3000

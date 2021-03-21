@@ -242,13 +242,13 @@
 
 </body>
 <script th:inline="javascript">
-    $("[data-toggle='tooltip']").tooltip();
-    var app = new Vue({
-        el: '#app',
-        data: {
-            title: '图书列表'
-        }
-    })
+    // $("[data-toggle='tooltip']").tooltip();
+    // var app = new Vue({
+    //     el: '#app',
+    //     data: {
+    //         title: '图书列表'
+    //     }
+    // })
 
     //获取所有客户
     $.post("post/getbooks", function (data) {
@@ -309,7 +309,7 @@
         var description = $("#insert_description").val();
 //        var img = $("#insert_img").val();
         var img = "assets/images/book-covers/05.jpg";
-        $.post("post/insertbook", {
+        $.post("admin/post/insertbook", {
             typeID: typeid, bookname: bookname, author: author,
             publisher: publisher, pushTime: time, ISBN: isbn, price: price, priceoff: priceoff,
             catalog: " ", description: description, img: img, time:time
