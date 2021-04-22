@@ -31,5 +31,5 @@ spring:
 mybatis:
   type-aliases-package: com.yunsle.urty_springbot.entity
 server:
-  port: 8080
+  port: 8888
 

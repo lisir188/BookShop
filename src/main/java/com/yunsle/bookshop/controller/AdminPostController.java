@@ -11,7 +11,7 @@ import com.yunsle.bookshop.service.BookService;
 import com.yunsle.bookshop.service.OrderService;
 import com.yunsle.bookshop.utils.DateUtil;
 import com.yunsle.bookshop.utils.JsonUtil;
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +29,7 @@ import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 /**
  * Created by Doublestar on 2018/1/11 16:32).
  */
-@Slf4j
+
 @RestController
 @RequestMapping(value = "/admin/post", method = RequestMethod.POST)
 public class AdminPostController {

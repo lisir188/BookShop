@@ -1,6 +1,6 @@
 package com.yunsle.bookshop.interceptor;
 
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Created by Doublestar on 2018/1/13 13:45).
  */
-@Slf4j
+
 @Component
 public class AdminInterceptor implements HandlerInterceptor{
 
