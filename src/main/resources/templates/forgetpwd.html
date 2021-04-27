@@ -88,6 +88,7 @@
 <script type="text/javascript">
     function doAjax(self) {
         var argv = $(self).attr("id");
+        alert(argv);
         var name = $("#name").val();
         var address = $("#address").val();
         $.post("post/" + argv + ".do", {name: name, address: address}, function (data) {

@@ -309,7 +309,7 @@
         var description = $("#insert_description").val();
 //        var img = $("#insert_img").val();
         var img = "assets/images/book-covers/05.jpg";
-        $.post("admin/post/insertbook", {
+        $.post("post/insertbook", {
             typeID: typeid, bookname: bookname, author: author,
             publisher: publisher, pushTime: time, ISBN: isbn, price: price, priceoff: priceoff,
             catalog: " ", description: description, img: img, time:time
