@@ -64,7 +64,7 @@
                 <!--<td>-->
                 <!--<a href="linkman?customerid=1" data-toggle="tooltip" data-placement="top" title="查看联系人"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>-->
                 <!--<a href="#" data-toggle="modal" data-target=".change"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>-->
-                <!--<a href="#" data-toggle="tooltip" data-placement="top" title="删除客户"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>-->
+                <!--<a href="#" data-toggle="tooltip" data-placement="top" title="删除书籍"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>-->
                 <!--</td>-->
                 <!--</tr>-->
 
@@ -162,7 +162,7 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">添加客户信息</h4>
+                <h4 class="modal-title">添加书籍信息</h4>
             </div>
 
             <div class="modal-body">
@@ -250,7 +250,7 @@
     //     }
     // })
 
-    //获取所有客户
+    //获取所有书籍
     $.post("post/getbooks", function (data) {
         objs = JSON.parse(data.data);
         console.error(objs);
@@ -273,7 +273,7 @@
                 '                    <td id="img' + objs[i].id + '"><img style="width: 40px;" src="../' + objs[i].img + '"/></td>\n' +
                 '                    <td>\n' +
                 '                        <a href="#" onclick="changeCustomer(this)" data-toggle="modal" data-target=".change"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>\n' +
-                '                        <a id="' + objs[i].id + '" href="#" onclick="deleteCustomer(this)" data-toggle="tooltip" data-placement="top" title="删除客户"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>\n' +
+                '                        <a id="' + objs[i].id + '" href="#" onclick="deleteCustomer(this)" data-toggle="tooltip" data-placement="top" title="删除书籍"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>\n' +
                 '                    </td>\n' +
                 '                </tr>'
             );
@@ -281,7 +281,7 @@
     }, "json");
 
 
-    //删除客户
+    //删除书籍
     function deleteCustomer(self) {
         var id = $(self).attr("id");
         $.post("post/deletebook", {bookid: id}, function (data) {
@@ -295,7 +295,7 @@
     };
 
 
-    //添加客户
+    //添加书籍
     $("#insert_submit").click(function () {
         var bookname = $("#insert_bookname").val();
         var typeid = parseInt($("#insert_typeid").val());
@@ -332,11 +332,11 @@
                     '                    <td id="img' + data.data + '"><img style="width: 40px;" src="../' + img + '"/></td>\n' +
                     '                    <td>\n' +
                     '                        <a href="#" onclick="changeCustomer(this)" data-toggle="modal" data-target=".change"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>\n' +
-                    '                        <a id="' + data.data + '" href="#" onclick="deleteCustomer(this)" data-toggle="tooltip" data-placement="top" title="删除客户"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>\n' +
+                    '                        <a id="' + data.data + '" href="#" onclick="deleteCustomer(this)" data-toggle="tooltip" data-placement="top" title="删除书籍"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>\n' +
                     '                    </td>\n' +
                     '                </tr>'
                 );
-                sweetAlert("", "客户添加成功！", data.message);
+                sweetAlert("", "书籍添加成功！", data.message);
             } else {
                 // 显示返回状态信息
                 sweetAlert("", data.data, data.message);
@@ -346,7 +346,7 @@
     });
 
 
-    //修改客户信息
+    //修改书籍信息
     var ch_id = 0;
 
     function changeCustomer(self) {
